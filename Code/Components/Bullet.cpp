@@ -4,9 +4,7 @@
 void CBullet::Initialize()
 {
 	pPlayer = gEnv->pEntitySystem->FindEntityByName("Player");
-	GetEntity()->Physicalize() {
 
-	};
 	
 }
 
