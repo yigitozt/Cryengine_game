@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="f3304780-a058-1741-7d61-86c754f92415" source="turret_diffuse.tif">
+ <Files>
+  <File path="turret_diffuse.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

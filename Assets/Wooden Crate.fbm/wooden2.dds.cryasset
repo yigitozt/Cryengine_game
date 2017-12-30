@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="174073bd-3e69-ef6b-5109-3f5a6307d606" source="wooden2.tif">
+ <Files>
+  <File path="wooden2.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">894</Detail>
+  <Detail name="height">894</Detail>
+  <Detail name="mipCount">1</Detail>
+ </Details>
+</AssetMetadata>

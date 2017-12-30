@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="9b7f8d8b-b0ed-221f-5ce4-2eeff18f614d" source="turret_glow.tif">
+ <Files>
+  <File path="turret_glow.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

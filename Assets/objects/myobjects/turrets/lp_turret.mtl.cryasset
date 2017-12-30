@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="f4e84b35-24d2-b12e-b2d5-16a3c4a095a8">
+ <Files>
+  <File path="lp_turret.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path>./turret_diffuse.dds</Path>
+  <Path>./turret_normal.dds</Path>
+  <Path>./turret_specular.dds</Path>
+  <Path>./turret_diffuse.dds</Path>
+ </Dependencies>
+</AssetMetadata>

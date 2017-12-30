@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="42ed7bc2-68fb-4972-0f47-d41e61a3d0c9" source="LP_Turret.fbx">
+ <Files>
+  <File path="LP_Turret.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">178</Detail>
+  <Detail name="vertexCount">240</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path>./LP_Turret.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

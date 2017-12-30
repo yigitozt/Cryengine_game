@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="8743bed1-60cd-3cc9-719f-7cf1b9bf9421">
+ <Files>
+  <File path="wooden crate.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">5</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path>Wooden Crate.fbm/wooden4.dds</Path>
+  <Path>Wooden Crate.fbm/wooden3.dds</Path>
+  <Path>Wooden Crate.fbm/wooden2.dds</Path>
+  <Path>Wooden Crate.fbm/wooden1.dds</Path>
+  <Path>Wooden Crate.fbm/wooden5.dds</Path>
+ </Dependencies>
+</AssetMetadata>

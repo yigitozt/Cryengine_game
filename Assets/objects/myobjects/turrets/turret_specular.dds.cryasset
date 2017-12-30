@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="2c73e9f6-9a96-6aa0-f3f9-bb67ec1b2d26" source="turret_specular.tif">
+ <Files>
+  <File path="turret_specular.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

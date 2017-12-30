@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="df1141bf-6391-921a-3106-5af2b934daac" source="Wooden Crate.fbx">
+ <Files>
+  <File path="Wooden Crate.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">6</Detail>
+  <Detail name="triangleCount">996</Detail>
+  <Detail name="vertexCount">1338</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path>./Wooden Crate.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

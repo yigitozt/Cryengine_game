@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="84461360-d173-20ee-61a0-3821d2477e3c">
+ <Files>
+  <File path="mytowerscene.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">EnvironmentPreset</Detail>
+ </Details>
+</AssetMetadata>

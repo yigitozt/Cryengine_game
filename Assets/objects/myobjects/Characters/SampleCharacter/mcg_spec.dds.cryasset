@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="4dcc6b54-2cd4-5905-fc26-e6e37231c280" source="mcg_spec.tif">
+ <Files>
+  <File path="mcg_spec.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">2048</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>
