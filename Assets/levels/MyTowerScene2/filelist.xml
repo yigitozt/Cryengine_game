@@ -1,0 +1,6 @@
+<download name="MyTowerScene2" type="Map">
+ <index src="filelist.xml" dest="filelist.xml"/>
+ <files>
+  <file src="level.pak" dest="level.pak" size="667457" md5="76fe93024189848a6625a44a4b4a3b17"/>
+ </files>
+</download>

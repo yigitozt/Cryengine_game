@@ -28,7 +28,18 @@
   <Path>%engine%/engineassets/textures/defaults/16_grey.dds</Path>
   <Path>%engine%/engineassets/textures/grey.dds</Path>
   <Path>%engine%/engineassets/textures/skys/night/half_moon.dds</Path>
+  <Path>engineassets/textures/grey.dds</Path>
   <Path>libs/environmentpresets/mytowerscene.xml</Path>
+  <Path>objects/myobjects/simple/editorprimitive.mtl</Path>
+  <Path>objects/myobjects/simple/primitive_box.cgf</Path>
+  <Path>objects/myobjects/simple/primitive_sphere.cgf</Path>
+  <Path>objects/myobjects/wooden crate.cgf</Path>
+  <Path>objects/myobjects/wooden crate.mtl</Path>
   <Path>scripts/ai/factions.xml</Path>
+  <Path>wooden crate.fbm/wooden1.dds</Path>
+  <Path>wooden crate.fbm/wooden2.dds</Path>
+  <Path>wooden crate.fbm/wooden3.dds</Path>
+  <Path>wooden crate.fbm/wooden4.dds</Path>
+  <Path>wooden crate.fbm/wooden5.dds</Path>
  </Dependencies>
 </AssetMetadata>

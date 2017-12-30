@@ -25,5 +25,6 @@ private:
 
 private:
 	void FrameUpdate();
-	void ShootBullet(IEntity* bullet);
+	void ShootBullet(Vec3 pos);
+	float spawnTimer = 0;
 };

@@ -25,4 +25,5 @@ private:
 
 private:
 	void FrameUpdate();
+	void LookAt(IEntity* target);
 };
