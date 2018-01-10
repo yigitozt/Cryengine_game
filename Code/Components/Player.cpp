@@ -1,6 +1,7 @@
 #include "StdAfx.h"
 #include "Player.h"
 #include "LevelControl.h"
+#include "GridControl.h"
 
 #include <CryRenderer/IRenderAuxGeom.h>
 
@@ -34,6 +35,36 @@ void CPlayerComponent::Initialize()
 
 	m_pInputComponent->RegisterAction("player", "spawnall", [this](int activationMode, float value) { HandleInputFlagChange((TInputFlags)EInputFlag::SpawnAll, activationMode);  });
 	m_pInputComponent->BindAction("player", "spawnall", eAID_KeyboardMouse, EKeyId::eKI_Space);
+
+	m_pInputComponent->RegisterAction("player", "press1", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press1); });
+	m_pInputComponent->BindAction("player", "press1", eAID_KeyboardMouse, EKeyId::eKI_1);
+
+	m_pInputComponent->RegisterAction("player", "press2", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press2); });
+	m_pInputComponent->BindAction("player", "press2", eAID_KeyboardMouse, EKeyId::eKI_2);
+
+	m_pInputComponent->RegisterAction("player", "press3", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press3); });
+	m_pInputComponent->BindAction("player", "press3", eAID_KeyboardMouse, EKeyId::eKI_3);
+
+	m_pInputComponent->RegisterAction("player", "press4", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press4); });
+	m_pInputComponent->BindAction("player", "press4", eAID_KeyboardMouse, EKeyId::eKI_4);
+
+	m_pInputComponent->RegisterAction("player", "press5", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press5); });
+	m_pInputComponent->BindAction("player", "press5", eAID_KeyboardMouse, EKeyId::eKI_5);
+
+	m_pInputComponent->RegisterAction("player", "press6", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press6); });
+	m_pInputComponent->BindAction("player", "press6", eAID_KeyboardMouse, EKeyId::eKI_6);
+
+	m_pInputComponent->RegisterAction("player", "press7", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press7); });
+	m_pInputComponent->BindAction("player", "press7", eAID_KeyboardMouse, EKeyId::eKI_7);
+
+	m_pInputComponent->RegisterAction("player", "press8", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press8); });
+	m_pInputComponent->BindAction("player", "press8", eAID_KeyboardMouse, EKeyId::eKI_8);
+
+	m_pInputComponent->RegisterAction("player", "press9", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::Press9); });
+	m_pInputComponent->BindAction("player", "press9", eAID_KeyboardMouse, EKeyId::eKI_9);
+
+	m_pInputComponent->RegisterAction("player", "pressEsc", [this](int activationMode, float value) { HandleInputFlagChange(activationMode, value, EInputType::PressEsc); });
+	m_pInputComponent->BindAction("player", "pressEsc", eAID_KeyboardMouse, EKeyId::eKI_R);
 
 	Revive();
 }
@@ -80,13 +111,94 @@ void CPlayerComponent::ProcessEvent(SEntityEvent& event)
 
 		if (m_inputFlags & (TInputFlags)EInputFlag::SpawnAll)
 		{
-			SEntitySpawnParams sLevelControlParams;
-			sLevelControlParams.pClass = gEnv->pEntitySystem->GetClassRegistry()->GetDefaultClass();
-			sLevelControlParams.vPosition = Vec3(512.0f, 512.0f, 36.0f);
+			if (!spawnOnce)
+			{
+			
+				SEntitySpawnParams sLevelControlParams;
+				sLevelControlParams.pClass = gEnv->pEntitySystem->GetClassRegistry()->GetDefaultClass();
+				sLevelControlParams.vPosition = Vec3(512.0f, 512.0f, 36.0f);
 
-			IEntity* pSpawnedLevelController = gEnv->pEntitySystem->SpawnEntity(sLevelControlParams);
-			pSpawnedLevelController->GetOrCreateComponentClass<CLevelControl>();
-			pSpawnedLevelController->PrePhysicsActivate(true);
+				IEntity* pSpawnedLevelController = gEnv->pEntitySystem->SpawnEntity(sLevelControlParams);
+				pSpawnedLevelController->GetOrCreateComponentClass<CLevelControl>();
+				pSpawnedLevelController->PrePhysicsActivate(true);
+
+				spawnOnce = true;
+			}
+		}
+
+		if (!pressOnce)
+		{
+			if (m_currentInput == EInputType::Press1)
+			{
+				CryLogAlways("1 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(0);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press2)
+			{
+				CryLogAlways("2 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(1);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press3)
+			{
+				CryLogAlways("3 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(2);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press4)
+			{
+				CryLogAlways("4 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(3);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press5)
+			{
+				CryLogAlways("5 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(4);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press6)
+			{
+				CryLogAlways("6 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(5);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press7)
+			{
+				CryLogAlways("7 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(6);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press8)
+			{
+				CryLogAlways("8 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(7);
+				pressOnce = true;
+			}
+			else if (m_currentInput == EInputType::Press9)
+			{
+				CryLogAlways("9 Pressed");
+				m_currentInput = EInputType::None;
+				SelectGrid(8);
+				pressOnce = true;
+			}
+		}
+
+		//////ESC
+		if (m_currentInput == EInputType::PressEsc)
+		{
+			CryLogAlways("R Pressed");
+			ResetBools();
+			m_currentInput = EInputType::None;
 		}
 
 		// Update the player's transformation
@@ -117,6 +229,7 @@ void CPlayerComponent::ProcessEvent(SEntityEvent& event)
 
 void CPlayerComponent::Revive()
 {
+	ResetBools();
 	// Set player transformation, but skip this in the Editor
 	if (!gEnv->IsEditor())
 	{
@@ -154,6 +267,29 @@ void CPlayerComponent::Revive()
 	m_mouseDeltaRotation = ZERO;
 }
 
+void CPlayerComponent::ResetBools()
+{
+	CryLogAlways("Resetting bools");
+	spawnOnce = false;
+	pressOnce = false;
+}
+
+void CPlayerComponent::SelectGrid(int number)
+{
+	std::string gridName = std::to_string(number);
+	const char* chr = gridName.c_str();
+	selectedGrid = gEnv->pEntitySystem->FindEntityByName(chr);
+	if (selectedGrid)
+	{
+		selectedGrid->GetComponent<CGridControl>()->startUpAnimation = true;
+		selectedGrid = nullptr;
+	}
+	else
+	{
+		ResetBools();
+	}
+}
+
 void CPlayerComponent::HandleInputFlagChange(TInputFlags flags, int activationMode, EInputFlagType type)
 {
 	switch (type)
@@ -180,4 +316,9 @@ void CPlayerComponent::HandleInputFlagChange(TInputFlags flags, int activationMo
 	}
 	break;
 	}
+}
+
+void CPlayerComponent::HandleInputFlagChange(int activationMode, float value, EInputType inputType)
+{
+	m_currentInput = inputType;
 }

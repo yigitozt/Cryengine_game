@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="81c42945-3b47-b610-d7c1-1532f07fe61c">
+ <Files>
+  <File path="box_fbx.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path>./boxTexture.dds</Path>
+ </Dependencies>
+</AssetMetadata>

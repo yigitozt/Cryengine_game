@@ -3,18 +3,6 @@
   <File path="MyTowerScene2/MyTowerScene2.cry"/>
  </Files>
  <Dependencies>
-  <Path>%editor%/crydesigner_timeofday.xml</Path>
-  <Path>%editor%/default_time_of_day.xml</Path>
-  <Path>%editor%/leveltemplates.xml</Path>
-  <Path>%editor%/mapscreenshotsettings.xml</Path>
-  <Path>%editor%/mbttemplates.xml</Path>
-  <Path>%editor%/modellingpanel.xml</Path>
-  <Path>%editor%/objecttemplates.xml</Path>
-  <Path>%editor%/propertyenumerations.xml</Path>
-  <Path>%editor%/soundtemplates.xml</Path>
-  <Path>%editor%/toolbox.xml</Path>
-  <Path>%editor%/usertools.xml</Path>
-  <Path>%engine%/config/defaultscripts/compressionpolicy.xml</Path>
   <Path>%engine%/engineassets/codecoverage/hit.dds</Path>
   <Path>%engine%/engineassets/codecoverage/pbar.dds</Path>
   <Path>%engine%/engineassets/codecoverage/unexpected.dds</Path>
@@ -22,10 +10,37 @@
   <Path>%engine%/engineassets/icons/highmemoryusage.dds</Path>
   <Path>%engine%/engineassets/icons/livepreview.dds</Path>
   <Path>%engine%/engineassets/icons/lowmemoryusage.dds</Path>
+  <Path>%engine%/engineassets/materials/fog/fogvolumebox.mtl</Path>
+  <Path>%engine%/engineassets/materials/fog/fogvolumeellipsoid.mtl</Path>
+  <Path>%engine%/engineassets/materials/fog/oceaninto.mtl</Path>
+  <Path>%engine%/engineassets/materials/fog/oceanintolowspec.mtl</Path>
+  <Path>%engine%/engineassets/materials/fog/oceanoutof.mtl</Path>
+  <Path>%engine%/engineassets/materials/fog/oceanoutoflowspec.mtl</Path>
+  <Path>%engine%/engineassets/materials/material_terrain_default.mtl</Path>
+  <Path>%engine%/engineassets/materials/sky/sky.mtl</Path>
+  <Path>%engine%/engineassets/materials/water/ocean_default.mtl</Path>
+  <Path>%engine%/engineassets/materials/water/wateroceanbottom.mtl</Path>
+  <Path>%engine%/engineassets/objects/default.cgf</Path>
+  <Path>%engine%/engineassets/texturemsg/defaultnouvs.dds</Path>
+  <Path>%engine%/engineassets/textures/defaults/16_12.dds</Path>
+  <Path>%engine%/engineassets/textures/defaults/16_34.dds</Path>
+  <Path>%engine%/engineassets/textures/defaults/16_5.dds</Path>
+  <Path>%engine%/engineassets/textures/defaults/16_grey.dds</Path>
   <Path>%engine%/engineassets/textures/grey.dds</Path>
-  <Path>objects/myobjects/simple/primitive_box.cgf</Path>
+  <Path>%engine%/engineassets/textures/skys/night/half_moon.dds</Path>
+  <Path>engineassets/textures/grey.dds</Path>
+  <Path>libs/environmentpresets/mytowerscene2.xml</Path>
+  <Path>objects/myobjects/box/box_fbx.cgf</Path>
+  <Path>objects/myobjects/box/boxtexture.dds</Path>
+  <Path>objects/myobjects/simple/editorprimitive.mtl</Path>
   <Path>objects/myobjects/simple/primitive_sphere.cgf</Path>
   <Path>objects/myobjects/wooden crate.cgf</Path>
+  <Path>objects/myobjects/wooden crate.mtl</Path>
   <Path>scripts/ai/factions.xml</Path>
+  <Path>wooden crate.fbm/wooden1.dds</Path>
+  <Path>wooden crate.fbm/wooden2.dds</Path>
+  <Path>wooden crate.fbm/wooden3.dds</Path>
+  <Path>wooden crate.fbm/wooden4.dds</Path>
+  <Path>wooden crate.fbm/wooden5.dds</Path>
  </Dependencies>
 </AssetMetadata>

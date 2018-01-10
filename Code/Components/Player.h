@@ -32,12 +32,27 @@ class CPlayerComponent final : public IEntityComponent
 	};
 
 public:
+	enum class EInputType
+	{
+		None = 0,
+		Press1,
+		Press2,
+		Press3,
+		Press4,
+		Press5,
+		Press6,
+		Press7,
+		Press8,
+		Press9,
+		PressEsc
+	};
+
+public:
 	CPlayerComponent() = default;
 	virtual ~CPlayerComponent() {}
 
 	// IEntityComponent
 	virtual void Initialize() override;
-
 	virtual uint64 GetEventMask() const override;
 	virtual void ProcessEvent(SEntityEvent& event) override;
 	// ~IEntityComponent
@@ -47,11 +62,14 @@ public:
 	{
 		desc.SetGUID("{63F4C0C6-32AF-4ACB-8FB0-57D45DD14725}"_cry_guid);
 	}
-
+	
 	void Revive();
+	void ResetBools();
+	void SelectGrid(int number);
 
 protected:
 	void HandleInputFlagChange(TInputFlags flags, int activationMode, EInputFlagType type = EInputFlagType::Hold);
+	void HandleInputFlagChange(int activationMode, float value, EInputType inputType);
 
 protected:
 	Cry::DefaultComponents::CCameraComponent* m_pCameraComponent = nullptr;
@@ -59,4 +77,11 @@ protected:
 
 	TInputFlags m_inputFlags;
 	Vec2 m_mouseDeltaRotation;
+
+	EInputType m_currentInput = EInputType::None;
+	IEntity* selectedGrid = nullptr;
+
+private:
+	bool spawnOnce = false;
+	bool pressOnce = false;
 };

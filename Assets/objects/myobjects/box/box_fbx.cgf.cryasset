@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="1e738c40-a7ee-bfe9-4fe4-4afe7e81c3cf" source="box_fbx.FBX">
+ <Files>
+  <File path="box_fbx.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">156</Detail>
+  <Detail name="vertexCount">310</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path>./box_fbx.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

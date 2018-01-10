@@ -69,7 +69,11 @@ void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lp
 		// Don't need to load the map in editor
 		if (!gEnv->IsEditor())
 		{
-			gEnv->pConsole->ExecuteString("map example", false, true);
+			gEnv->pConsole->ExecuteString("MyTowerScene2", false, true);
+		}
+		else
+		{
+			gEnv->pConsole->ExecuteString("MyTowerScene2", false, true);
 		}
 	}
 	break;
@@ -100,7 +104,7 @@ bool CGamePlugin::OnClientConnectionReceived(int channelId, bool bIsReset)
 
 		// Create the player component instance
 		CPlayerComponent* pPlayer = pPlayerEntity->GetOrCreateComponentClass<CPlayerComponent>();
-
+		curPlayer = pPlayer;
 		// Push the component into our map, with the channel id as the key
 		m_players.emplace(std::make_pair(channelId, pPlayerEntity->GetId()));
 	}
@@ -119,7 +123,6 @@ bool CGamePlugin::OnClientReadyForGameplay(int channelId, bool bIsReset)
 			if (CPlayerComponent* pPlayer = pPlayerEntity->GetComponent<CPlayerComponent>())
 			{
 				pPlayer->Revive();
-
 			}
 		}
 	}
@@ -129,7 +132,7 @@ bool CGamePlugin::OnClientReadyForGameplay(int channelId, bool bIsReset)
 
 
 void CGamePlugin::OnClientDisconnected(int channelId, EDisconnectionCause cause, const char* description, bool bKeepClient)
-{
+{	
 	// Client disconnected, remove the entity and from map
 	auto it = m_players.find(channelId);
 	if (it != m_players.end())

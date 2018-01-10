@@ -4,7 +4,6 @@
 #include <CryEntitySystem/IEntitySystem.h>
 #include "GamePlugin.h"
 
-
 class CLevelControl : public IEntityComponent
 {
 public:
@@ -18,12 +17,20 @@ public:
 	}
 
 	virtual void Initialize() override;
+	virtual uint64 GetEventMask() const override { return BIT64(ENTITY_EVENT_UPDATE); }
+	virtual void ProcessEvent(SEntityEvent& event) override;
 	void SpawnEnemy(Vec3 pos);
-
-	
+	void LevelOver(bool isGameOver);
+	void SelectGrid(int selectedGrid);
 
 private:
 
+	void FrameUpdate();
+	void CreateEmptyGrid(int gridSize, Vec3 anchorPosition);
 
+private:
 
+	int gridCounter = 0;
+	const float spaceBtwCubes = 5.0f;
+	int randomSelectedCube = 0;
 };
